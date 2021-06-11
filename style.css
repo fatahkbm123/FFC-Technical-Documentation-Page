@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.6fr 2.1fr;
+  grid-template-areas: 'nav content';
+}
+
+nav {
+  border-right: 3px solid grey;
+}
+
+nav {
+  grid-area: nav;
+  width: 22.3%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav header {
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  height: 89%;
+  overflow-y: scroll;
+}
+
+nav ul li {
+  list-style: none;
+  border: 1px solid black;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+nav a {
+  padding: 15px 20px;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  color: #333;
+}
+
+main {
+  grid-area: content;
+  width: 100%;
+  padding: 5px 30px;
+}
+
+header {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+section {
+  padding-top: 10px;
+}
+
+main p,
+main ul li {
+  color: rgb(41, 41, 41);
+  margin: 15px;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+main ul li {
+  margin: 25px 60px !important;
+}
+
+main div {
+  background: rgb(0, 0, 0);
+  margin: 25px 40px;
+  padding: 20px;
+  color: white;
+  border-radius: 4px;
+}
+
+code {
+  color: whitesmoke;
+}
+
+main .ul {
+  padding: 0;
+  margin: 0px 40px !important;
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  nav header {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'nav'
+      'content';
+  }
+
+  nav {
+    position: relative;
+    width: 100%;
+    border-right: 0;
+  }
+
+  nav header {
+    font-size: 4vw;
+  }
+
+  nav ul {
+    height: 40%;
+  }
+
+  main {
+    margin-top: -400px;
+  }
+
+  main {
+    padding: 0px 25px;
+  }
+
+  section {
+    padding-top: 5px;
+  }
+}
